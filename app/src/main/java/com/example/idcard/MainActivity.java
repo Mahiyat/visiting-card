@@ -25,26 +25,21 @@ public class MainActivity extends AppCompatActivity {
         gmailIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create the intent for sending email
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"mahiyat.stu2019@juniv.edu"}); // Replace with your email
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"mahiyat.stu2019@juniv.edu"});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
                 intent.putExtra(Intent.EXTRA_TEXT, "Hi! How are you?");
 
-                // Set Gmail as the specific app to handle this intent
                 intent.setPackage("com.google.android.gm");
 
-                // Check if Gmail is installed
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 } else {
-                    // Fallback to a chooser if Gmail is not installed
                     Intent chooser = Intent.createChooser(intent, "Send Email");
                     if (chooser.resolveActivity(getPackageManager()) != null) {
                         startActivity(chooser);
                     } else {
-                        // Notify user if no email clients are installed
                         Toast.makeText(MainActivity.this, "No email clients are installed.", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -67,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
         facebookIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Facebook profile username or ID
-                String facebookId = "mahiyat.mahiyat.902"; // Replace with your actual Facebook Profile ID or username
+                String facebookId = "mahiyat.mahiyat.902";
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);
 
@@ -78,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
                 if (!(intent.resolveActivity(getPackageManager()) == null)) {
                     startActivity(intent);
                 } else {
-                    // Open in browser if the Facebook app is not installed
                     intent.setData(Uri.parse("https://www.facebook.com/" + facebookId));
                     startActivity(intent);
                 }
@@ -91,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://wa.me/+8801728714400")); // WhatsApp API URL
+                intent.setData(Uri.parse("https://wa.me/+8801728714400"));
                 startActivity(intent);
             }
         });
@@ -101,14 +94,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://t.me/mahiyattanzim")); // Telegram profile or group link
-                intent.setPackage("org.telegram.messenger"); // Ensure it opens in the Telegram app
+                intent.setData(Uri.parse("https://t.me/mahiyattanzim"));
+                intent.setPackage("org.telegram.messenger");
 
-                // Verify the Telegram app is installed before launching the intent
                 if (!(intent.resolveActivity(getPackageManager()) == null)) {
                     startActivity(intent);
                 } else {
-                    // Handle the case where Telegram is not installed
                     Intent fallbackIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/mahiyattanzim"));
                     startActivity(fallbackIntent);
                 }

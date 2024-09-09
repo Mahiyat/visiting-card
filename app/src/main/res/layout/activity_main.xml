@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A7CFEF"
+    android:backgroundTint="#DCE7EF"
+    android:textAlignment="center"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText9"
+        app:srcCompat="@drawable/id_image"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/editTextText2"
+        android:layout_width="221dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name: Mahiyat Tanzim"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText9" />
+
+    <TextView
+        android:id="@+id/editTextText4"
+        android:layout_width="221dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Student ID: 20200650731"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <TextView
+        android:id="@+id/editTextText6"
+        android:layout_width="221dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="174dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Batch: 49"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/editTextText8"
+        android:layout_width="221dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="174dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Blood Group: B+"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+
+    <TextView
+        android:id="@+id/editTextText9"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Jahangirnagar University"
+        android:textColor="#3F51B5"
+        android:visibility="visible"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="221dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Department: Computer Science and Engineering"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+
+    <TextView
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="50dp"
+        android:text="Contacts"
+        android:textColor="#3F51B5"
+        android:visibility="visible"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText8"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contacts">
+
+        <ImageView
+            android:id="@+id/imgGmail"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Gmail"
+            app:srcCompat="@drawable/gmail" />
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Phone"
+            app:srcCompat="@drawable/phone" />
+
+        <ImageView
+            android:id="@+id/imgWhatsApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="WhatsApp"
+            app:srcCompat="@drawable/whatsapp" />
+
+        <ImageView
+            android:id="@+id/imgTelegram"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Telegram"
+            app:srcCompat="@drawable/telegram" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="30dp"
+        android:text="Find More Info In"
+        android:textColor="#3F51B5"
+        android:visibility="visible"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutOne"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moreInfo">
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Facebook"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/imgLinkedIn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="LinkedIn"
+            app:srcCompat="@drawable/linkedin" />
+
+
+
+        <ImageView
+            android:id="@+id/imgGitHub"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="GitHub"
+            app:srcCompat="@drawable/github" />
+
+        <ImageView
+            android:id="@+id/imgPortfolio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Portfolio"
+            app:srcCompat="@drawable/portfolio" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
